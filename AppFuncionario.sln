@@ -5,6 +5,11 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFuncionario", "AppFuncionario.csproj", "{1AF17603-88E1-4865-B7B3-4A800939C339}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{E4737273-FD6A-4BED-BF32-B4628C1C5C54}"
+	ProjectSection(SolutionItems) = preProject
+		DbCliente.mdf = DbCliente.mdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

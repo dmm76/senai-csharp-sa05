@@ -17,7 +17,7 @@ namespace AppFuncionario
         public string data_nascimento { get; set; }
         public string matricula { get; set; }
 
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Master10\\Documents\\GitHub\\Projeto-C--Senai\\DbFuncionario.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Master10\\Documents\\GitHub\\senai-csharp-sa05\\DbCliente.mdf;Integrated Security=True");
 
         public List<Funcionario> Listafuncionario()
         {
@@ -49,7 +49,7 @@ namespace AppFuncionario
         {
             try
             {
-                string sql = "INSERT INTO Funcionario(nome,turno,data_nascimento,matricula) VALUES ('"+nome+"','"+turno+"','"+data_nascimento+"','"+matricula+"')";
+                string sql = "INSERT INTO Funcionario(nome,turno,data_nascimento,matricula) VALUES ('" + nome+"','"+turno+"','"+data_nascimento+"','"+matricula+"')";
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
@@ -97,7 +97,7 @@ namespace AppFuncionario
         {
             try
             {
-                string sql = "UPDATE Funcionario SET nome='"+nome+"',turno='"+turno+"',data_nascimento='"+data_nascimento+"',matricula='"+matricula+"' WHERE Id='"+Id+"'";
+                string sql = "UPDATE Funcionario SET nome='" + nome+"',turno='"+turno+"',data_nascimento='"+data_nascimento+"',matricula='"+matricula+"' WHERE Id='"+Id+"'";
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
@@ -117,7 +117,7 @@ namespace AppFuncionario
         {
             try
             {
-                string sql = "DELETE FROM Funcionario WHERE Id='"+Id+"'";
+                string sql = "DELETE FROM Funcionario WHERE Id='" + Id+"'";
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
@@ -135,7 +135,7 @@ namespace AppFuncionario
 
         public bool RegistroRepetido(string matricula)
         {
-            string sql = "SELECT * FROM Funcionario WHERE matricula='"+matricula+"'";
+            string sql = "SELECT * FROM Funcionario WHERE matricula='" + matricula+"'";
             if (con.State == ConnectionState.Open)
             {
                 con.Close();

@@ -16,5 +16,22 @@ namespace AppFuncionario
         {
             InitializeComponent();
         }
+
+        private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.clienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dbClienteDataSet);
+
+        }
+
+        private void frmAniversario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'dbClienteDataSet1.Funcionario'. Você pode movê-la ou removê-la conforme necessário.
+            this.funcionarioTableAdapter.Fill(this.dbClienteDataSet1.Funcionario);
+            // TODO: esta linha de código carrega dados na tabela 'dbClienteDataSet.Cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter.Fill(this.dbClienteDataSet.Cliente);
+
+        }
     }
 }

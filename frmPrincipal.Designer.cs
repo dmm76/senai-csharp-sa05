@@ -45,6 +45,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.pbxAniversario = new System.Windows.Forms.PictureBox();
             this.btnLocalizar = new System.Windows.Forms.Button();
+            this.btnAniversario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAniversario)).BeginInit();
             this.SuspendLayout();
@@ -250,12 +251,24 @@
             this.btnLocalizar.UseVisualStyleBackColor = false;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
+            // btnAniversario
+            // 
+            this.btnAniversario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAniversario.Location = new System.Drawing.Point(454, 193);
+            this.btnAniversario.Name = "btnAniversario";
+            this.btnAniversario.Size = new System.Drawing.Size(94, 23);
+            this.btnAniversario.TabIndex = 17;
+            this.btnAniversario.Text = "Aniversariante";
+            this.btnAniversario.UseVisualStyleBackColor = true;
+            this.btnAniversario.Click += new System.EventHandler(this.btnAniversario_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 428);
+            this.Controls.Add(this.btnAniversario);
             this.Controls.Add(this.btnLocalizar);
             this.Controls.Add(this.pbxAniversario);
             this.Controls.Add(this.btnExcluir);
@@ -307,6 +320,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.PictureBox pbxAniversario;
         private System.Windows.Forms.Button btnLocalizar;
+        private System.Windows.Forms.Button btnAniversario;
     }
 }
 

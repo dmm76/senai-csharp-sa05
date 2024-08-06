@@ -179,5 +179,11 @@ namespace AppFuncionario
         {
 
         }
+
+        private void btnAniversario_Click(object sender, EventArgs e)
+        {
+            frmAniversario Aniversario = new frmAniversario();
+            Aniversario.ShowDialog();
+        }
     }
 }
